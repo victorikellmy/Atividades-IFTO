@@ -26,13 +26,18 @@ public class Conta {
     }
 
     public float sacar(float valor) {
-        if (saldo >= 1) {
-            valor = Float.parseFloat(JOptionPane.showInputDialog("informe o saque:"));
-
+        valor = Float.parseFloat(JOptionPane.showInputDialog("informe o saque:"));
+        if (saldo + limite >= valor) {
             saldo = saldo - valor;
             JOptionPane.showInputDialog(saldo);
             return saldo;
-        } else
+        }
+
+        else if (saldo + limite < valor) {
+            JOptionPane.showInputDialog("Voce nao possuie esse valor na sua conta ");
+        }
+
+        else
             JOptionPane.showMessageDialog(null, "sem dinheiro na conta");
         ;
         return saldo;
@@ -51,7 +56,7 @@ public class Conta {
             JOptionPane.showMessageDialog(null,
                     "o cliente " + cliente + " possui:\n Saldo:" + saldo + "\nLimite:" + limite);
         } else {
-            limite = limite + (saldo);
+            limite = saldo;
             saldo = 0;
             JOptionPane.showMessageDialog(null,
                     "o cliente " + cliente + " possui:\n Saldo:" + saldo + "\nLimite:" + limite);
