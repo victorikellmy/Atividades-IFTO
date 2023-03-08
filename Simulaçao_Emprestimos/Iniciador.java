@@ -7,6 +7,6 @@ public class Iniciador {
 
         emprestimo.aprovaçao();
         System.out.printf("valor total pago: %.2f %n", (emprestimo.valorTotal()));
-        System.out.printf("valor das parcela: %.2f %n", (emprestimo.valorParcelas()));
+        System.out.printf("valor das parcelas: %.2f %n", (emprestimo.valorParcelas()));
     }
 }
