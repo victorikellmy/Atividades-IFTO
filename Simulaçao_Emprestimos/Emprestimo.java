@@ -18,7 +18,7 @@ public class Emprestimo {
             System.out.println("Emprestimo negado");
             System.exit(0);
         } else
-            System.out.println("Emprestimo aceito aceito");
+            System.out.println("Emprestimo aceito aceitos");
 
     }
 
