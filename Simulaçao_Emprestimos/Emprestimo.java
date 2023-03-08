@@ -22,15 +22,6 @@ public class Emprestimo {
 
     }
 
-    public void valorParcelas() {
-        double valorParc = valor_emprestimo / num_Parcelas;
-        for (int i = 0; i < num_Parcelas; i++) {
-            valorParc += valorParc * (juros / 100);
-            System.out.println("Parcelas: " + valorParc);
-        }
-
-    }
-
     public double valorTotal() {
         double valorTotal = valor_emprestimo / num_Parcelas;
         double valorSomado = 0;
@@ -38,7 +29,12 @@ public class Emprestimo {
             valorTotal += valorTotal * (juros / 100);
             valorSomado += valorTotal;
         }
+        valorSomado += valor_emprestimo;
         return valorSomado;
     }
 
+    public double valorParcelas() {
+        double valorParc = valorTotal() / num_Parcelas;
+        return valorParc;
+    }
 }
