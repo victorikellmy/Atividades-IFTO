@@ -16,9 +16,10 @@ public class Emprestimo {
     public void aprovaçao() {
         if (valor_emprestimo > cliente.salario * 0.30) {
             System.out.println("Emprestimo negado");
-            System.exit(0);
         } else
             System.out.println("Emprestimo aceito aceito");
+        System.out.printf("valor total pago: %.2f %n", (valorTotal()));
+        System.out.printf("valor das parcelas: %.2f %n", (valorParcelas()));
 
     }
 
