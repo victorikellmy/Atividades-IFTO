@@ -27,7 +27,6 @@ public class Pessoa {
 
     public void dados() {
         System.out.println("----------------------");
-
         System.out.println("Nome:" + nome);
         System.out.println("Idade:" + calculaIdade());
         endereco.dados();
